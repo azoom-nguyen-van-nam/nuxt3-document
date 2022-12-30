@@ -29,6 +29,15 @@ export const useDocsGuide = () =>
       ]
     },
     {
+      title: 'composables',
+      children: [
+        {
+          title: 'Auto-import',
+          router: '/docs/directory-structure/composables/auto-import'
+        },
+      ]
+    },
+    {
       title: 'plugins',
       children: [
         {
