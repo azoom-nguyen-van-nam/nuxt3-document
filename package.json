@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "start": "env $(grep -v '^#' ./.env) nuxt start",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "deploy:tag": "TAG=`echo staging-nuxt3-document-$(date +%Y%m%d-%H%M%S)` && git tag $TAG && git push origin $TAG",
+    "deploy:staging": "yarn deploy:delete-staging-tag && yarn deploy:tag",
+    "deploy:delete-staging-tag": "git fetch --tags && git push origin --delete $(git tag -l 'staging-*') || true && git fetch origin --prune 'refs/tags/*:refs/tags/*'"
+  },
+  "devDependencies": {
+    "@nuxt/content": "^2.3.0",
+    "@nuxtjs/tailwindcss": "^6.2.0",
+    "@tailwindcss/typography": "^0.5.8",
+    "autoprefixer": "^10.4.13",
+    "nuxt": "3.0.0",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4"
+  }
+}
