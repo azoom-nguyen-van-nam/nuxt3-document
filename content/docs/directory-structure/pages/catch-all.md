@@ -8,7 +8,7 @@ description: 'Catch-all route in nuxt 3'
 
 - Nếu ta muốn bắt được tất cả các route, cần tạo và sử dụng file có tên như `[...slug].vue`.
 
-```
+```javascript
 <template>
   <p>{{ $route.params.slug }}</p>
 </template>
@@ -16,7 +16,7 @@ description: 'Catch-all route in nuxt 3'
 
 Navigating đến `/hello/world` sẽ hiển thị:
 
-```
+```javascript
 <p>["hello", "world"]</p>
 
 ```

@@ -1,4 +1,4 @@
-import { DocsSidebar, DocsGuide } from '~~/types/docs'
+import { DocsSidebar, DocsGuide, RenderingDocs } from '~~/types/docs'
 
 export const useDocsSidebar = () =>
   useState<Array<DocsSidebar>>('DocsSidebar', () => [
@@ -72,7 +72,31 @@ export const useDocsGuide = () =>
         {
           title: 'Head tag',
           router: '/docs/directory-structure/pages/seo-and-meta'
-        },
+        }
       ]
     }
+  ])
+
+export const useRenderingDocs = () =>
+  useState<Array<RenderingDocs>>('RenderingDocs', () => [
+    {
+      title: 'Client Side Rendering (SPA)',
+      router: '/docs/spa'
+    },
+    // {
+    //   title: 'Server Side Rendering (SSR)',
+    //   router: '/docs/spa'
+    // },
+    {
+      title: 'Universal Rendering (SSR + Hydration)',
+      router: '/docs/spa'
+    },
+    // {
+    //   title: 'Static Rendering (SSG)',
+    //   router: '/docs/spa'
+    // },
+    {
+      title: 'Hybrid Rendering',
+      router: '/docs/spa'
+    },
   ])

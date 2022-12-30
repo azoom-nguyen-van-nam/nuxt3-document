@@ -15,9 +15,23 @@
         </NuxtLink>
       </div>
 
-      <h3 class="pb-2 mb-0">Rendering Modes</h3>
+      <h3 class="pb-2 mb-0">
+        <NuxtLink
+          to="/docs/rendering-modes"
+          class="text-slate-900 hover:text-slate-500"
+          activeClass="!text-sky-500"
+          >Rendering Modes</NuxtLink
+        >
+      </h3>
 
-      <h3 class="pb-2 mb-0">State management</h3>
+      <h3 class="pb-2 mb-0">
+        <NuxtLink
+          to="/docs/state-management"
+          class="mb-3 font-medium text-slate-500 hover:text-slate-900"
+          activeClass="!text-sky-500 border-sky-500"
+          >State management</NuxtLink
+        >
+      </h3>
 
       <h3 class="pb-2 mb-0">Directory Structure</h3>
       <div class="mb-6 ml-4" v-for="folder in docsGuide" :key="folder.title">
@@ -38,8 +52,9 @@
 </template>
 
 <script setup lang="ts">
-import { DocsSidebar, DocsGuide } from '~~/types/docs'
+import { DocsSidebar, DocsGuide, RenderingDocs } from '~~/types/docs'
 
 const docsSidebar: Array<DocsSidebar> = unref(useDocsSidebar())
 const docsGuide: Array<DocsGuide> = unref(useDocsGuide())
+const renderingDocs: Array<RenderingDocs> = unref(useRenderingDocs())
 </script>

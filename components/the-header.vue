@@ -21,8 +21,8 @@
           target="_blank"
         >
           <span class="iconfont icon-github-fill !text-lg" />
+          <span class="ml-2 font-bold">n-v-nam</span>
         </NuxtLink>
-        <span class="ml-2 font-bold">n-v-nam</span>
       </div>
     </nav>
   </div>
