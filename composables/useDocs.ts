@@ -1,4 +1,9 @@
-import { DocsSidebar, DocsGuide, RenderingDocs } from '~~/types/docs'
+import {
+  DocsSidebar,
+  DocsGuide,
+  RenderingDocs,
+  StateManagementDoc
+} from '~~/types/docs'
 
 export const useDocsSidebar = () =>
   useState<Array<DocsSidebar>>('DocsSidebar', () => [
@@ -34,7 +39,7 @@ export const useDocsGuide = () =>
         {
           title: 'Auto-import',
           router: '/docs/directory-structure/composables/auto-import'
-        },
+        }
       ]
     },
     {
@@ -92,20 +97,24 @@ export const useRenderingDocs = () =>
       title: 'Client Side Rendering (SPA)',
       router: '/docs/spa'
     },
-    // {
-    //   title: 'Server Side Rendering (SSR)',
-    //   router: '/docs/spa'
-    // },
     {
       title: 'Universal Rendering (SSR + Hydration)',
       router: '/docs/spa'
     },
-    // {
-    //   title: 'Static Rendering (SSG)',
-    //   router: '/docs/spa'
-    // },
     {
       title: 'Hybrid Rendering',
       router: '/docs/spa'
+    }
+  ])
+
+export const useStateManagement = () =>
+  useState<Array<StateManagementDoc>>('StateManagementDocs', () => [
+    {
+      title: 'Data-Memory leak',
+      router: '/docs/state-management/data-and-memory-leak'
     },
+    {
+      title: 'Hydration mismatch',
+      router: '/docs/state-management/hydration-mismatch'
+    }
   ])

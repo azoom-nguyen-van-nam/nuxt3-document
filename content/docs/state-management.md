@@ -17,10 +17,10 @@ const alsoSharedState = useState('shared')
 
 `useState` chỉ dùng trong `setup` hoặc `Lifecycle Hooks`.
 
-### Tại sao có ref() rồi vẫn cần useState():
+### Tại sao có ref() rồi vẫn cần useState(): (xem chi tiết ở các mục nhỏ)
 
 - Chia sẻ `state` giữa các `components`
-- `Singleton` và vấn đề rò rỉ bộ nhớ khi `Cross-Request`
+- `Singleton` và vấn đề để Memory leak
 - Chia sẻ dữ liệu từ `server` --> `client` và `hydration`
 
 ### Pinia vs useState()

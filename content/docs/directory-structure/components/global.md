@@ -8,7 +8,7 @@ description: 'Global component in nuxt 3'
 
 ### Đăng ký các **global component** (có thể sử dụng mà không cần import)
 
-#### Option 1 - Chỉ đăng ký global cho **một số** component: Tạo các component theo cấu trúc thư mục:
+#### Option 1 - Chỉ đăng ký global (bỏ prefix) cho **một số** component: Tạo các component theo cấu trúc thư mục:
 
 ```javascript
 | components/

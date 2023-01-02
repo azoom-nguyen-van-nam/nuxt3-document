@@ -14,3 +14,8 @@ export interface RenderingDocs {
   icon?: string
   router: string
 }
+
+export interface StateManagementDoc {
+  title: string
+  router: string
+}
