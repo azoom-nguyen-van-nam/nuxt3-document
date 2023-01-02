@@ -78,4 +78,4 @@ users.value.push({ id: random, name: `user 1` })
 
 - Như ví dụ ở **case 1** nó sẽ xuất hiện 2 chữ `test`
 
-![hydration mismatch](/_nuxt/assets/img/docs/state-management/4.png)<br> <br>
+![hydration mismatch](/img/4.png)<br> <br>

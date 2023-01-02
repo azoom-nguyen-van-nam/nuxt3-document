@@ -6,7 +6,7 @@ title: Data and Memory leak
 # :fire: Vấn đề Data Leak và Memory Leak:fire:
 
 ### Doc Nuxt 3 có 1 lưu ý như này, mình sẽ làm rõ trong VD dưới đây nhé:
-![issue](/_nuxt/assets/img/docs/state-management/3.png)<br>
+![issue](/img/3.png)<br>
 `Link`: https://nuxt.com/docs/getting-started/state-management#best-practices
 
 <br><br>
@@ -48,7 +48,7 @@ users: [
 ]
 ```
 
-![Request 1](/_nuxt/assets/img/docs/state-management/1.png)<br>
+![Request 1](/img/1.png)<br>
 
 ##### **Sau đó User 2 vào trình duyệt**: trả về cả dữ liệu từ User 1 đã push vào (users có 3 phần tử)
 
@@ -60,7 +60,7 @@ users: [
 ]
 ```
 
-![Request 1](/_nuxt/assets/img/docs/state-management/2.png)<br> <br>
+![Request 1](/img/2.png)<br> <br>
 
 - Như chúng ta thấy, vì `ref` ~ `Singleton Pattern` nên khi đó người dùng hoàn toàn có thể bị rò rỉ dữ liệu (`data leak`), nếu trường hợp trên data push vào là tài khoản, mật khẩu vào thì toang :smile:
 - Bên cạnh đó vì nó không được giải phóng sau mỗi `request`, khi số lượng request tăng -> biến `users` sẽ tăng đến 1 mức nào đó của bộ nhớ -> server sẽ `ngỏm` ~~~ `memory leak`
